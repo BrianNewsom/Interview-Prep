@@ -21,8 +21,33 @@ public class LinkedList {
         }
     }
 
+    public Node removeByValue(int value) {
+        Node toRemove = null;
+        if (head == null){
+            toRemove = null;
+        } else if (head.getValue() == value) {
+            toRemove = this.head;
+            this.head = head.getNext();
+        } else {
+            Node cursor = head;
+            Node next = cursor.getNext();
+            while(next != null) {
+                if (next.getValue() == value) {
+                    // Skip over removed node;
+                    cursor.setNext(next.getNext());
+                    toRemove = next;
+                    break;
+                } else {
+                    cursor = next;
+                    next = next.getNext();
+                }
+            }
+        }
+        return toRemove;
+    }
+
     public String toString() {
-        String stringified = "";
+        String stringified = "Printing LL: \n";
         Node cursor = head;
         while(cursor != null) {
             stringified += cursor.toString();

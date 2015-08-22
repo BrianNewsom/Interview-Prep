@@ -12,7 +12,7 @@ public class LinkedListTest {
 
         ll.insert(newNode);
 
-        assertEquals("Should only contain one node", newNode.toString(), ll.toString());
+        assertEquals("Should only contain one node", "Printing LL: \n" + newNode, ll.toString());
     }
 
 }

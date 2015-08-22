@@ -11,5 +11,24 @@ public class Driver {
         ll.insert(node2);
 
         System.out.println(ll);
+
+        ll.removeByValue(2);
+
+        System.out.println(ll);
+
+        ll.removeByValue(1);
+
+        System.out.println(ll);
+
+        ll.insert(node);
+
+        ll.removeByValue(2);
+
+        System.out.println(ll);
+
+        ll.removeByValue(1);
+
+        System.out.println(ll);
+
     }
 }
